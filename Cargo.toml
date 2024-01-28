@@ -1,0 +1,10 @@
+[package]
+name = "mecha-leptos"
+version = "0.0.1"
+edition = "2021"
+authors = ["Saeed Andalib <saeedandalib5@gmail.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+leptos = { version = "0.6.3", features = ["csr", "nightly"] }
