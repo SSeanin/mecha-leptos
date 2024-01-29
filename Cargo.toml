@@ -14,3 +14,7 @@ path = "src/lib/lib.rs"
 
 [dependencies]
 leptos = { version = "0.6.3", features = ["csr", "nightly"] }
+stylers = "0.3.2"
+
+[build-dependencies]
+stylers = "0.3.2"
