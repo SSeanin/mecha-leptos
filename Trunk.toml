@@ -1,4 +1,17 @@
+[serve]
+address = "127.0.0.1"
+port = 8080
+open = true
+
+[clean]
+cargo = true
+
 [[hooks]]
-stage = "post_build"
-command = "sh"
-command_arguments = ["-c", "cp ./target/main.css $TRUNK_STAGING_DIR/"]
+stage = "pre_build"
+command = "mkdir"
+command_arguments = ["-p", "generated/css"]
+
+[[hooks]]
+stage = "pre_build"
+command = "touch"
+command_arguments = ["generated/css/style.css"]
