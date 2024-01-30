@@ -3,15 +3,7 @@ address = "127.0.0.1"
 port = 8080
 open = true
 
-[clean]
-cargo = true
-
 [[hooks]]
 stage = "pre_build"
-command = "mkdir"
-command_arguments = ["-p", "generated/css"]
-
-[[hooks]]
-stage = "pre_build"
-command = "touch"
-command_arguments = ["generated/css/style.css"]
+command = "sh"
+command_arguments = ["-c", "mkdir -p generated/css && touch generated/css/style.css"]
