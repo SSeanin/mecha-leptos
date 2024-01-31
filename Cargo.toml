@@ -18,6 +18,7 @@ turf = "0.7.1"
 
 [package.metadata.turf]
 minify = true
+load_paths = ["scss"]
 
 [package.metadata.turf.file_output]
 global_css_file_path = "generated/css/style.css"

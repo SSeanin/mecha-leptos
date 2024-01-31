@@ -1,0 +1,39 @@
+// Font definitions
+$font-primary: 'Lora', serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+
+// ----------------- COLORS --------------------
+// Primary color
+$color-primary: #00b593;
+$color-primary-light: #00dbb2;
+$color-primary-dark: #008269;
+
+// Background color
+$color-background-dark: #132c33;
+
+// White color
+$color-white: #fff;
+
+// Black color
+$color-black: #000;
+
+// Gray color
+$color-gray-light: #ededed;
+$color-gray-sub: #888;
+$color-gray: #444;
+$color-gray-dark: #333;
+
+// ----------------- BORDER ------------------
+$border-radius-large: 1.5rem;
+$border-radius-medium: 3px;
+$border-radius-small: 2px;
+
+// ----------------- SHADOW ------------------
+$btn-box-shadow: 0 1rem 2rem rgba($color-black, .2);
+$btn-box-shadow-focus: 0 .3rem .7rem rgba($color-black, .2);
+$section-box-shadow: 0 3rem 5rem rgba($color-black, .14);
+$header-title-text-shadow: 0 .5rem 1rem rgba($color-black, .3);
+
+// ----------------- GRADIENT ----------------
+$header-gradient: linear-gradient(to right top, #006bc9, #008ecc, #00b0cc, #00ccc5, #00b593);
