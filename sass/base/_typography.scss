@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import "../abstracts/variables";
+
+body {
+  // Global font
+  font-family: $font-primary;
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6;
+  color: $color-gray-dark;
+}
+
+.heading-primary {
+  font-weight: 500;
+}
+
+.heading-secondary {
+  color: $color-white;
+  font-family: $font-display;
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 7.7rem;
+  backface-visibility: hidden;
+}
+
+.heading-tertiary {
+  font-family: $font-display;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+}

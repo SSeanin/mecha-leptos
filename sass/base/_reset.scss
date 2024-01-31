@@ -1,0 +1,17 @@
+// Global reset
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // Defining 1rem to be 10px => 10px / 16px (default browser font) = 62.5%
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}

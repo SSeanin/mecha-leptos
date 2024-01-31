@@ -1,0 +1,10 @@
+@mixin horizontal-divider-small($top-margin) {
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 5rem;
+    background-color: rgba($color-black, .1);
+    margin: $top-margin auto 0;
+  }
+}
