@@ -1,47 +1,49 @@
 @import "abstracts/variables";
 
 .btn {
+
     &:link,
     &:visited {
-      color: $color-primary;
-      text-decoration: none;
-      text-transform: uppercase;
-      text-align: center;
-      font-family: $font-display;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 1.1rem;
-      background-color: $color-white;
-      border: 1px solid $color-white;
-      display: inline-block;
-      padding: 1rem 2rem;
-      min-width: 16rem;
-      transition: all .2s ease-in-out;
-    }
-  
-    &--cta {
-      &:link,
-      &:visited {
-        color: $color-white;
-        background-color: $color-primary;
-        border: 1px solid $color-primary;
-      }
-    }
-  
-    &--outline {
-      &:link,
-      &:visited {
+        color: $color-primary;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: $font-display;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.1rem;
         background-color: $color-white;
-        border: 1px solid $color-primary;
-      }
+        border: 1px solid $color-white;
+        display: inline-block;
+        padding: 1rem 2rem;
+        min-width: 16rem;
+        transition: all .2s ease-in-out;
     }
-  
+
+    &--cta {
+
+        &:link,
+        &:visited {
+            color: $color-white;
+            background-color: $color-primary;
+            border: 1px solid $color-primary;
+        }
+    }
+
+    &--outline {
+
+        &:link,
+        &:visited {
+            background-color: $color-white;
+            border: 1px solid $color-primary;
+        }
+    }
+
     &:hover {
-      box-shadow: $btn-box-shadow;
+        box-shadow: $btn-box-shadow;
     }
-  
+
     &:active {
-      box-shadow: $btn-box-shadow-focus;
+        box-shadow: $btn-box-shadow-focus;
     }
-  }
-  
+}

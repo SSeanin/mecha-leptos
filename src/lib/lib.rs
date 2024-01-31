@@ -6,9 +6,9 @@ pub mod utils;
 
 use leptos::*;
 
-use crate::components::Button;
+use crate::components::Link;
 
 #[component]
 pub fn App() -> impl IntoView {
-    view! { <Button cta=true inner_text="Something".to_owned() href="a".to_owned()/> }
+    view! { <Link inner_text="Some Link".to_owned() href="a".to_owned()/> }
 }
