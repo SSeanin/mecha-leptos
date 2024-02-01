@@ -4,3 +4,4 @@ pub mod organisms;
 pub mod templates;
 
 pub use atoms::*;
+pub use molecules::*;
