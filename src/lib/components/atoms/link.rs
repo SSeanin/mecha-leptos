@@ -5,9 +5,9 @@ use leptos::*;
 turf::style_sheet!("src/lib/components/atoms/link/link.scss");
 
 #[component]
-pub fn Link(
-    href: String,
-    inner_text: String,
+pub fn link(
+    #[prop(into)] href: String,
+    #[prop(into)] inner_text: String,
     #[prop(optional)] inline: bool,
 ) -> impl IntoView {
     a().attr("class", ClassName::LINK)
