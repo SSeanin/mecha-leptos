@@ -1,0 +1,52 @@
+@import "abstracts/variables";
+@import "base/typography";
+
+.nav-bar {
+    font-style: normal;
+    font-family: $font-display;
+    color: $color-white;
+    z-index: 100;
+
+    &__content {
+        .nav {
+            visibility: hidden;
+            display: none;
+        }
+    }
+
+    &--admin &__content {
+        .nav {
+            visibility: visible;
+            display: inline-block;
+        }
+    }
+
+    // Layout
+    grid-column: full-start / full-end;
+    grid-row: nav-start / nav-end;
+    position: sticky;
+    top: 0;
+
+    display: grid;
+    grid-template-columns: minmax(3.5%, 1fr) [content-start] minmax(max-content, 120rem) [content-end] minmax(3.5%, 1fr);
+
+    &__content {
+        grid-column: content-start / content-end;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--admin &__content {
+        justify-content: space-between;
+
+        &:first-child {
+            margin-left: 1rem;
+        }
+
+        &:last-child {
+            margin-right: 1rem;
+        }
+    }
+}

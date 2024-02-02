@@ -5,3 +5,4 @@ pub mod templates;
 
 pub use atoms::*;
 pub use molecules::*;
+pub use organisms::*;

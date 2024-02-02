@@ -6,9 +6,9 @@ pub mod utils;
 
 use leptos::*;
 
-use crate::components::Nav;
+use crate::components::Navbar;
 
 #[component]
 pub fn App() -> impl IntoView {
-    view! { <Nav/> }
+    view! { <Navbar admin=true/> }
 }

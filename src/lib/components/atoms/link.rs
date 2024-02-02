@@ -16,7 +16,7 @@ pub fn link(
 
     view! {
         <a href=href class=style>
-            <Show when=move || inline fallback=move || view! {}>
+            <Show when=move || inline fallback=|| view! {}>
                 <svg>
                     <use_ xlink=true href="/assets/icons/sprite.svg#icon-link"></use_>
                 </svg>
