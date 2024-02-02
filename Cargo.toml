@@ -14,6 +14,7 @@ path = "src/lib/lib.rs"
 
 [dependencies]
 leptos = { version = "0.6.3", features = ["csr", "nightly"] }
+leptos_router = { version = "0.6.5", features = ["csr"] }
 turf = "0.7.1"
 
 [package.metadata.turf]

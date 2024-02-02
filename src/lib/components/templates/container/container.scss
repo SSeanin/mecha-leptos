@@ -1,0 +1,9 @@
+.container {
+    display: grid;
+    grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14.6rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
+    grid-template-rows: [nav-start] 6rem [nav-end];
+
+    &--home {
+        grid-template-rows: [nav-start header-start] 11rem [nav-end] 92vh [header-end];
+    }
+}
