@@ -1,6 +1,6 @@
 use leptos::*;
 
-use crate::components::Nav;
+use crate::components::nav;
 
 turf::style_sheet!("src/lib/components/organisms/navbar/navbar.scss");
 
@@ -21,7 +21,7 @@ pub fn navbar(#[prop(optional)] admin: bool) -> impl IntoView {
                 </h1>
 
                 <Show when=move || admin fallback=|| view! {}>
-                    <Nav/>
+                    <nav></nav>
                 </Show>
             </div>
         </div>

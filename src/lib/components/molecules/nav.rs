@@ -5,7 +5,7 @@ use crate::components::Link;
 turf::style_sheet!("src/lib/components/molecules/nav/nav.scss");
 
 #[component]
-pub fn Nav() -> impl IntoView {
+pub fn nav() -> impl IntoView {
     view! {
         <nav class=ClassName::NAV>
             <ul class=ClassName::NAV_LIST>

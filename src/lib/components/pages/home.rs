@@ -1,6 +1,6 @@
 use leptos::*;
 
 #[component]
-pub fn Home() -> impl IntoView {
+pub fn home() -> impl IntoView {
     view! { <h1>Home</h1> }
 }
