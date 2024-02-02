@@ -1,4 +1,3 @@
-use leptos::html::*;
 use leptos::*;
 
 turf::style_sheet!("src/lib/components/atoms/button/button.scss");
@@ -10,9 +9,16 @@ pub fn button(
     #[prop(optional)] cta: bool,
     #[prop(optional)] outline: bool,
 ) -> impl IntoView {
-    a().attr("class", ClassName::BTN)
-        .class(ClassName::BTN_CTA, cta)
-        .class(ClassName::BTN_OUTLINE, outline)
-        .attr("href", href)
-        .child(inner_text)
+    let style = format!(
+        "{} {} {}",
+        ClassName::BTN,
+        if cta { ClassName::BTN_CTA } else { "" },
+        if outline { ClassName::BTN_OUTLINE } else { "" }
+    );
+
+    view! {
+        <a href=href class=style>
+            {inner_text}
+        </a>
+    }
 }
