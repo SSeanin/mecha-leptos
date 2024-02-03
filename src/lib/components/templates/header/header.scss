@@ -1,0 +1,58 @@
+@import "abstracts/variables";
+
+.header {
+    background-image: $header-gradient;
+    color: $color-white;
+
+    &__content {
+        &::before {
+            display: block;
+            content: 'S';
+            padding-top: 10rem;
+            font-family: $font-display;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 60rem;
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba($color-black, .1);
+            z-index: -100;
+        }
+    }
+
+    &__title {
+        margin: 0 17rem 2.8rem 17rem;
+    }
+
+    &__link,
+    &__link:link,
+    &__link:visited {
+        transition: all .15s ease-in-out;
+        text-shadow: 0 0 0 transparent;
+        transform: translateY(0);
+    }
+
+    &__title:hover &__link {
+        text-shadow: $header-title-text-shadow;
+        transform: translateY(-2px);
+    }
+
+    // Positioning
+    grid-column: full-start / full-end;
+    grid-row: header-start / header-end;
+
+    // Centering the header__text-box
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: center;
+
+    &__content {
+        align-self: center;
+        text-align: center;
+        position: fixed;
+    }
+}
