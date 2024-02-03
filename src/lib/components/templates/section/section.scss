@@ -1,0 +1,11 @@
+@import "abstracts/variables";
+
+.section {
+    background-color: $color-white;
+    padding: 11rem 22.8rem 15rem;
+    box-shadow: $section-box-shadow;
+
+    // Positioning
+    z-index: 200;
+    grid-column: inner-center-start / inner-center-end;
+}
