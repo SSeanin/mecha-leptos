@@ -1,0 +1,5 @@
+.home {
+    &__container {
+        grid-template-rows: [nav-start header-start] 11rem [nav-end] 92vh [header-end] !important;
+    }
+}
