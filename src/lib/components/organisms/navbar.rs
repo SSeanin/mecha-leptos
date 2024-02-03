@@ -5,11 +5,15 @@ use crate::components::{HeadingPrimary, Nav};
 turf::style_sheet!("src/lib/components/organisms/navbar/navbar.scss");
 
 #[component]
-pub fn navbar(#[prop(optional)] admin: bool) -> impl IntoView {
+pub fn navbar(
+    #[prop(optional)] admin: bool,
+    #[prop(optional, into)] class: String,
+) -> impl IntoView {
     let nav_bar_style = format!(
-        "{} {}",
+        "{} {} {}",
         ClassName::NAV_BAR,
-        if admin { ClassName::NAV_BAR_ADMIN } else { "" }
+        if admin { ClassName::NAV_BAR_ADMIN } else { "" },
+        class
     );
 
     view! {

@@ -7,7 +7,7 @@ turf::style_sheet!("src/lib/components/templates/stories/stories.scss");
 #[component]
 pub fn stories(children: Children) -> impl IntoView {
     view! {
-        <Section class=ClassName::STORIES>
+        <Section>
             <div class=ClassName::STORIES_HEAD>
                 <HeadingTertiary class=ClassName::STORIES_HEADING>"My Stories"</HeadingTertiary>
             </div>
