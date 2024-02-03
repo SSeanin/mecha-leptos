@@ -4,4 +4,8 @@
     &__container {
         grid-template-rows: [nav-start header-start] 11rem [nav-end] 12vh [header-end] !important;
     }
+
+    &__section {
+        padding-top: 14rem !important;
+    }
 }
