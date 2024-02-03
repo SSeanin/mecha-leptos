@@ -1,7 +1,7 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-.post {
+.summary {
     &:not(:last-of-type) {
         @include horizontal-divider-small($top-margin: 9rem);
     }

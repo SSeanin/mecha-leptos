@@ -3,10 +3,10 @@ use leptos::*;
 
 use crate::components::{Button, ButtonGroup, PostHeader};
 
-turf::style_sheet!("src/lib/components/organisms/post/post.scss");
+turf::style_sheet!("src/lib/components/organisms/summary/summary.scss");
 
 #[component]
-pub fn post(
+pub fn summary(
     #[prop(into)] title: String,
     #[prop(into)] post_link: String,
     #[prop(into)] author: String,
@@ -18,7 +18,7 @@ pub fn post(
     #[prop(into)] date: NaiveDate,
 ) -> impl IntoView {
     view! {
-        <article class=ClassName::POST>
+        <article class=ClassName::SUMMARY>
             <PostHeader
                 title=title
                 post_link=post_link
@@ -32,7 +32,7 @@ pub fn post(
 
             <div>{summary}</div>
 
-            <ButtonGroup class=ClassName::POST_ACTION_GROUP>
+            <ButtonGroup class=ClassName::SUMMARY_ACTION_GROUP>
                 <Button cta=true href="#" inner_text="Read On"/>
                 <Button outline=true href="#" inner_text="Share"/>
             </ButtonGroup>
