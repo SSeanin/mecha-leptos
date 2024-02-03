@@ -1,6 +1,6 @@
 use leptos::*;
 
-use crate::components::nav;
+use crate::components::{HeadingPrimary, Nav};
 
 turf::style_sheet!("src/lib/components/organisms/navbar/navbar.scss");
 
@@ -15,13 +15,13 @@ pub fn navbar(#[prop(optional)] admin: bool) -> impl IntoView {
     view! {
         <div class=nav_bar_style>
             <div class=ClassName::NAV_BAR_CONTENT>
-                <h1 class=ClassName::HEADING_PRIMARY>
+                <HeadingPrimary>
                     <span>"SSeanin, "</span>
                     <span>"The Blog"</span>
-                </h1>
+                </HeadingPrimary>
 
                 <Show when=move || admin fallback=|| view! {}>
-                    <nav></nav>
+                    <Nav/>
                 </Show>
             </div>
         </div>

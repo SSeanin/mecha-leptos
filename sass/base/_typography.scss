@@ -10,26 +10,3 @@ body {
   line-height: 1.6;
   color: $color-gray-dark;
 }
-
-.heading-primary {
-  font-weight: 500;
-}
-
-.heading-secondary {
-  color: $color-white;
-  font-family: $font-display;
-  font-size: 6.4rem;
-  font-style: normal;
-  font-weight: 400;
-  text-transform: uppercase;
-  line-height: 7.7rem;
-  backface-visibility: hidden;
-}
-
-.heading-tertiary {
-  font-family: $font-display;
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-style: normal;
-  text-transform: uppercase;
-}

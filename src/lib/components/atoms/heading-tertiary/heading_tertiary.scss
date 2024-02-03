@@ -1,0 +1,9 @@
+@import "abstracts/variables";
+
+.heading-tertiary {
+    font-family: $font-display;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+}
