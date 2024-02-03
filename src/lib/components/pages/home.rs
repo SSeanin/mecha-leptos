@@ -1,6 +1,6 @@
 use leptos::*;
 
-use crate::components::{Container, Header, Navbar};
+use crate::components::{Container, ContentContainer, Footer, Header, Navbar};
 
 turf::style_sheet!("src/lib/components/pages/home/home.scss");
 
@@ -18,6 +18,10 @@ pub fn home() -> impl IntoView {
                 category="Technology"
                 category_link="#"
             />
+
+            <ContentContainer>
+                <Footer/>
+            </ContentContainer>
         </Container>
     }
 }
