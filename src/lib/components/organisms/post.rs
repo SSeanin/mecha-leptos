@@ -1,3 +1,4 @@
+use chrono::NaiveDate;
 use leptos::*;
 
 use crate::components::{Button, ButtonGroup, PostHeader};
@@ -14,6 +15,7 @@ pub fn post(
     #[prop(into)] category_link: String,
     #[prop(into)] min_read: i32,
     #[prop(into)] summary: String,
+    #[prop(into)] date: NaiveDate,
 ) -> impl IntoView {
     view! {
         <article class=ClassName::POST>
@@ -25,6 +27,7 @@ pub fn post(
                 category=category
                 category_link=category_link
                 min_read=min_read
+                date=date
             />
 
             <div>{summary}</div>

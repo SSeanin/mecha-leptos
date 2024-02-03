@@ -1,3 +1,4 @@
+use chrono::NaiveDate;
 use leptos::*;
 
 use crate::components::{HeadingTertiary, Link, Meta};
@@ -13,6 +14,7 @@ pub fn post_header(
     #[prop(into)] category: String,
     #[prop(into)] category_link: String,
     #[prop(into)] min_read: i32,
+    #[prop(into)] date: NaiveDate,
 ) -> impl IntoView {
     view! {
         <header>
@@ -28,6 +30,7 @@ pub fn post_header(
                 <span>By <Link inline=true href=author_link inner_text=author/></span>
                 <span>In <Link inline=true href=category_link inner_text=category/></span>
                 <span>{min_read} " Min Read"</span>
+                <span>{date.format("%B %e, %Y").to_string()}</span>
             </Meta>
         </header>
     }
