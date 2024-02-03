@@ -7,11 +7,13 @@ pub fn link(
     #[prop(into)] href: String,
     #[prop(into)] inner_text: String,
     #[prop(optional)] inline: bool,
+    #[prop(optional, into)] class: String,
 ) -> impl IntoView {
     let style = format!(
-        "{} {}",
+        "{} {} {}",
         ClassName::LINK,
-        if inline { ClassName::LINK_INLINE } else { "" }
+        if inline { ClassName::LINK_INLINE } else { "" },
+        class,
     );
 
     view! {

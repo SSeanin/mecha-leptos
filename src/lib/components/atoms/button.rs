@@ -8,12 +8,14 @@ pub fn button(
     #[prop(into)] inner_text: String,
     #[prop(optional)] cta: bool,
     #[prop(optional)] outline: bool,
+    #[prop(optional, into)] class: String,
 ) -> impl IntoView {
     let style = format!(
-        "{} {} {}",
+        "{} {} {} {}",
         ClassName::BTN,
         if cta { ClassName::BTN_CTA } else { "" },
-        if outline { ClassName::BTN_OUTLINE } else { "" }
+        if outline { ClassName::BTN_OUTLINE } else { "" },
+        class,
     );
 
     view! {
