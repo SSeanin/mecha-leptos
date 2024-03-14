@@ -16,7 +16,12 @@ path = "src/lib/lib.rs"
 chrono = { version = "0.4.33", features = ["serde"] }
 leptos = { version = "0.6.3", features = ["csr", "nightly"] }
 leptos_router = { version = "0.6.5", features = ["csr"] }
-turf = "0.7.1"
+reqwest = { version = "0.11.26", features = ["json", "cookies"] }
+serde = { version = "1.0", features = ["serde_derive"] }
+turf = "0.8.0"
+
+[build-dependencies]
+dotenvy = "0.15.7"
 
 [package.metadata.turf]
 minify = true

@@ -2,6 +2,7 @@
 turf::style_sheet!("sass/main.scss");
 
 pub mod components;
+pub mod env;
 pub mod utils;
 
 use leptos::*;
