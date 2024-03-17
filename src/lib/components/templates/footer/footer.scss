@@ -2,10 +2,6 @@
     text-align: center;
     font-size: 1.5rem;
 
-    [class$='-icon'] {
-        font-style: normal;
-    }
-
     // Positioning
     grid-row: footer-start / footer-end;
     grid-column: inner-center-start / inner-center-end;

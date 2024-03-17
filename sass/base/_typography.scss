@@ -9,4 +9,9 @@ body {
   font-style: italic;
   line-height: 1.6;
   color: $color-gray-dark;
+
+  [class^='emoji'],
+  [class*='emoji'] {
+    font-style: normal;
+  }
 }
