@@ -1,4 +1,5 @@
 use leptos::*;
+use web_sys::{window, MouseEvent};
 
 use crate::{
     api::post::get_posts_paginated,
@@ -9,6 +10,7 @@ turf::style_sheet!("src/lib/components/pages/home/home.scss");
 
 #[component]
 pub fn home() -> impl IntoView {
+    // TODO The pagination should be handled using the router
     const LIMIT: i32 = 5;
 
     let (page, set_page) = create_signal(1);
@@ -24,9 +26,13 @@ pub fn home() -> impl IntoView {
             <Header/>
 
             <ContentContainer>
-                <Stories>
+                <Stories on_load_click=move |event: MouseEvent| {
+                    event.prevent_default();
+                    window().unwrap().scroll_to_with_x_and_y(0f64, 550f64);
+                    set_page.update(|current_page| *current_page += 1)
+                }>
 
-                    <Suspense fallback=move || {
+                    <Transition fallback=move || {
                         view! { <p>Loading...</p> }
                     }>
                         {move || {
@@ -70,7 +76,7 @@ pub fn home() -> impl IntoView {
                                 })
                         }}
 
-                    </Suspense>
+                    </Transition>
 
                 </Stories>
                 <Footer/>
