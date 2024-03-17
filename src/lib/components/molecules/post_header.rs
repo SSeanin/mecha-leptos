@@ -16,13 +16,14 @@ pub fn post_header(
     #[prop(into)] min_read: i32,
     #[prop(into)] date: DateTime<Local>,
 ) -> impl IntoView {
+    let before_content = title.chars().collect::<Vec<char>>()[0];
+
     view! {
         <header>
-            <HeadingTertiary class=format!(
-                "{} {}",
-                ClassName::POST_HEADER_TITLE,
-                ClassName::MARGIN_BOTTOM_SMALL,
-            )>
+            <HeadingTertiary
+                data_content=before_content
+                class=format!("{} {}", ClassName::POST_HEADER_TITLE, ClassName::MARGIN_BOTTOM_SMALL)
+            >
                 <Link class=ClassName::POST_HEADER_TITLE_LINK href=post_link inner_text=title/>
             </HeadingTertiary>
 

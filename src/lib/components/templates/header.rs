@@ -30,8 +30,15 @@ pub fn header() -> impl IntoView {
                                             .map(|posts| {
                                                 let latest_post = posts[0].clone();
                                                 let href = format!("/posts/{}", latest_post.shortcode);
+                                                let before_content = latest_post
+                                                    .title
+                                                    .chars()
+                                                    .collect::<Vec<char>>()[0];
                                                 view! {
-                                                    <HeadingSecondary class=ClassName::HEADER_TITLE>
+                                                    <HeadingSecondary
+                                                        data_content=before_content
+                                                        class=ClassName::HEADER_TITLE
+                                                    >
                                                         <Link
                                                             class=ClassName::HEADER_LINK
                                                             inner_text=latest_post.title

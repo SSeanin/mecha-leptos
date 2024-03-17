@@ -6,6 +6,11 @@ turf::style_sheet!("src/lib/components/atoms/heading-tertiary/heading_tertiary.s
 pub fn heading_tertiary(
     children: Children,
     #[prop(optional, into)] class: String,
+    #[prop(optional, into)] data_content: String,
 ) -> impl IntoView {
-    view! { <h1 class=format!("{} {}", ClassName::HEADING_TERTIARY, class)>{children()}</h1> }
+    view! {
+        <h3 data_content=data_content class=format!("{} {}", ClassName::HEADING_TERTIARY, class)>
+            {children()}
+        </h3>
+    }
 }

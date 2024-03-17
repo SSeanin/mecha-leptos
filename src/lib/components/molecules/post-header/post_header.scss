@@ -13,7 +13,7 @@
 
         &::before {
             z-index: -50;
-            content: 'K';
+            content: attr(data_content);
             position: absolute;
             text-transform: uppercase;
             top: 60%;

@@ -4,10 +4,12 @@
     background-image: $header-gradient;
     color: $color-white;
 
-    &__content {
+    &__title {
+        margin: 0 17rem 2.8rem 17rem;
+
         &::before {
             display: block;
-            content: 'S';
+            content: attr(data_content);
             padding-top: 10rem;
             font-family: $font-display;
             font-weight: 600;
@@ -21,10 +23,6 @@
             color: rgba($color-black, .1);
             z-index: -100;
         }
-    }
-
-    &__title {
-        margin: 0 17rem 2.8rem 17rem;
     }
 
     &__link,
