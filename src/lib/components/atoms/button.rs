@@ -4,7 +4,7 @@ turf::style_sheet!("src/lib/components/atoms/button/button.scss");
 
 #[component]
 pub fn button(
-    #[prop(into)] href: String,
+    #[prop(into, optional)] href: String,
     #[prop(into)] inner_text: String,
     #[prop(optional)] cta: bool,
     #[prop(optional)] outline: bool,
@@ -17,6 +17,8 @@ pub fn button(
         if outline { ClassName::BTN_OUTLINE } else { "" },
         class,
     );
+
+    logging::log!("{:?}", href);
 
     view! {
         <a href=href class=style>

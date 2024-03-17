@@ -1,4 +1,3 @@
-use chrono::NaiveDate;
 use leptos::*;
 
 use crate::components::{Container, ContentContainer, Footer, Navbar, Post, RawHeader, Section};
@@ -19,7 +18,7 @@ pub fn article() -> impl IntoView {
                         title="The Dream Starts Here Something Big is Coming"
                         post_link="#"
                         min_read=2
-                        date=NaiveDate::from_ymd_opt(2024, 3, 2).unwrap()
+                        date=chrono::offset::Local::now()
                         author="Saeed Andalib"
                         author_link="#"
                         category="Technology"

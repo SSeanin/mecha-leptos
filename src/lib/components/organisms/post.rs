@@ -1,4 +1,4 @@
-use chrono::NaiveDate;
+use chrono::{DateTime, Local};
 use leptos::*;
 
 use crate::components::PostHeader;
@@ -13,7 +13,7 @@ pub fn post(
     #[prop(into)] category: String,
     #[prop(into)] category_link: String,
     #[prop(into)] min_read: i32,
-    #[prop(into)] date: NaiveDate,
+    #[prop(into)] date: DateTime<Local>,
 ) -> impl IntoView {
     view! {
         <article>

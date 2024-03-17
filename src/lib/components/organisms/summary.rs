@@ -1,4 +1,4 @@
-use chrono::NaiveDate;
+use chrono::{DateTime, Local};
 use leptos::*;
 
 use crate::components::{Button, ButtonGroup, PostHeader};
@@ -15,13 +15,13 @@ pub fn summary(
     #[prop(into)] category_link: String,
     #[prop(into)] min_read: i32,
     #[prop(into)] summary: String,
-    #[prop(into)] date: NaiveDate,
+    #[prop(into)] date: DateTime<Local>,
 ) -> impl IntoView {
     view! {
         <article class=ClassName::SUMMARY>
             <PostHeader
                 title=title
-                post_link=post_link
+                post_link=post_link.as_str()
                 author=author
                 author_link=author_link
                 category=category
@@ -33,8 +33,8 @@ pub fn summary(
             <div>{summary}</div>
 
             <ButtonGroup class=ClassName::SUMMARY_ACTION_GROUP>
-                <Button cta=true href="#" inner_text="Read On"/>
-                <Button outline=true href="#" inner_text="Share"/>
+                <Button cta=true href=post_link inner_text="Read On"/>
+            // <Button outline=true href="#" inner_text="Share"/>
             </ButtonGroup>
         </article>
     }

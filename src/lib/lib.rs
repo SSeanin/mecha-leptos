@@ -5,6 +5,8 @@ pub mod components;
 pub mod env;
 pub mod utils;
 
+pub use utils::*;
+
 use leptos::*;
 use leptos_router::*;
 

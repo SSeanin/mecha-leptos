@@ -1,12 +1,12 @@
 use crate::utils::domain::User;
-use chrono::{DateTime, Utc};
+use chrono::{DateTime, Local};
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Post {
-    title: String,
-    content: String,
-    shortcode: String,
-    author: User,
-    created_at: DateTime<Utc>,
+    pub title: String,
+    pub content: String,
+    pub shortcode: String,
+    pub author: User,
+    pub created_at: DateTime<Local>,
 }

@@ -1,8 +1,8 @@
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct User {
-    first_name: String,
-    last_name: String,
+    pub first_name: String,
+    pub last_name: String,
     email: Option<String>,
 }
