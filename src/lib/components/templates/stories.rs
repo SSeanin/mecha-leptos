@@ -18,8 +18,7 @@ pub fn stories(
 
             <main>{children()}</main>
 
-            <div class=ClassName::STORIES_PAGINATION>
-                <Button on:click=on_load_click inner_text="Load Older" cta=true/>
+            <div class=ClassName::STORIES_PAGINATION>// <Button disabled=true on:click=on_load_click inner_text="Load Older" cta=true/>
             </div>
         </Section>
     }
