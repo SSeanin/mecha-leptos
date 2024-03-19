@@ -61,9 +61,8 @@ pub fn article() -> impl IntoView {
                                                             author_link="#"
                                                             category="Technology"
                                                             category_link="#"
-                                                        >
-                                                            {post.content}
-                                                        </Post>
+                                                            content=post.content
+                                                        />
                                                     }
                                                 })}
 

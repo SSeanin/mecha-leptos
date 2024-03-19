@@ -7,11 +7,19 @@ body {
   font-size: 1.7rem;
   font-weight: 400;
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.8;
   color: $color-gray-dark;
 
   [class^='emoji'],
   [class*='emoji'] {
     font-style: normal;
+  }
+}
+
+p {
+  letter-spacing: .3;
+
+  &:not(:last-of-type) {
+    margin-bottom: 3rem;
   }
 }

@@ -5,7 +5,6 @@ use crate::components::PostHeader;
 
 #[component]
 pub fn post(
-    children: Children,
     #[prop(into)] title: String,
     #[prop(into)] post_link: String,
     #[prop(into)] author: String,
@@ -14,6 +13,7 @@ pub fn post(
     #[prop(into)] category_link: String,
     #[prop(into)] min_read: i32,
     #[prop(into)] date: DateTime<Local>,
+    #[prop(into)] content: String,
 ) -> impl IntoView {
     view! {
         <article>
@@ -28,7 +28,7 @@ pub fn post(
                 date=date
             />
 
-            <div>{children()}</div>
+            <div inner_html=content></div>
         </article>
     }
 }

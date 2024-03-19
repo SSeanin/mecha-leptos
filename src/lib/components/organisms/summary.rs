@@ -30,7 +30,7 @@ pub fn summary(
                 date=date
             />
 
-            <div>{summary}</div>
+            <div inner_html=summary></div>
 
             <ButtonGroup class=ClassName::SUMMARY_ACTION_GROUP>
                 <Button cta=true href=post_link inner_text="Read On"/>
