@@ -1,6 +1,6 @@
 use leptos::*;
 
-use crate::components::{HeadingPrimary, Nav};
+use crate::components::{HeadingPrimary, Link, Nav};
 
 turf::style_sheet!("src/lib/components/organisms/navbar/navbar.scss");
 
@@ -20,8 +20,10 @@ pub fn navbar(
         <div class=nav_bar_style>
             <div class=ClassName::NAV_BAR_CONTENT>
                 <HeadingPrimary>
-                    <span>"SSeanin, "</span>
-                    <span>"The Blog"</span>
+                    <Link href="/home">
+                        <span>"SSeanin, "</span>
+                        <span>"The Blog"</span>
+                    </Link>
                 </HeadingPrimary>
 
                 <Show when=move || admin fallback=|| view! {}>

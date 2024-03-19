@@ -1,4 +1,5 @@
 use leptos::*;
+use leptos_router::*;
 
 turf::style_sheet!("src/lib/components/atoms/button/button.scss");
 
@@ -18,11 +19,9 @@ pub fn button(
         class,
     );
 
-    logging::log!("{:?}", href);
-
     view! {
-        <a href=href class=style>
+        <A href=href class=style>
             {inner_text}
-        </a>
+        </A>
     }
 }

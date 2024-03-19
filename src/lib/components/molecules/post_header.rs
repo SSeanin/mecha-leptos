@@ -24,12 +24,22 @@ pub fn post_header(
                 data_content=before_content
                 class=format!("{} {}", ClassName::POST_HEADER_TITLE, ClassName::MARGIN_BOTTOM_SMALL)
             >
-                <Link class=ClassName::POST_HEADER_TITLE_LINK href=post_link inner_text=title/>
+                <Link class=ClassName::POST_HEADER_TITLE_LINK href=post_link>
+                    {title}
+                </Link>
             </HeadingTertiary>
 
             <Meta class=ClassName::POST_HEADER_META>
-                <span>By <Link inline=true href=author_link inner_text=author/></span>
-                <span>In <Link inline=true href=category_link inner_text=category/></span>
+                <span>
+                    By <Link inline=true href=author_link>
+                        {author}
+                    </Link>
+                </span>
+                <span>
+                    In <Link inline=true href=category_link>
+                        {category}
+                    </Link>
+                </span>
                 <span>{min_read} " Min Read"</span>
                 <span>{date.format("%B %e, %Y").to_string()}</span>
             </Meta>

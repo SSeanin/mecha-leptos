@@ -11,11 +11,11 @@ pub fn nav() -> impl IntoView {
             <ul class=ClassName::NAV_LIST>
 
                 <li class=ClassName::NAV_ITEM>
-                    <Link inner_text="User" href="#"/>
+                    <Link href="#">User</Link>
                 </li>
 
                 <li class=ClassName::NAV_ITEM>
-                    <Link inner_text="Post" href="#"/>
+                    <Link href="#">Post</Link>
                 </li>
 
             </ul>

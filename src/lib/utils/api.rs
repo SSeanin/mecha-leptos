@@ -1,4 +1,5 @@
 pub mod auth;
+pub mod params;
 pub mod post;
 pub mod response;
 
@@ -54,6 +55,7 @@ pub fn get_api_root() -> Result<Url> {
     Ok(Url::parse(env::MECHA_API_DOMAIN)?.join(env::MECHA_API_PATH)?)
 }
 
+// TODO write a better request client
 pub async fn make_request(method: http::Method, path: Url) -> Result<Response> {
     let res = match method {
         http::Method::GET => reqwest::get(path).await?,

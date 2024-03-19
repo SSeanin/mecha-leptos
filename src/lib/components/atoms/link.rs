@@ -1,11 +1,12 @@
 use leptos::*;
+use leptos_router::*;
 
 turf::style_sheet!("src/lib/components/atoms/link/link.scss");
 
 #[component]
 pub fn link(
+    children: Children,
     #[prop(into)] href: String,
-    #[prop(into)] inner_text: String,
     #[prop(optional)] inline: bool,
     #[prop(optional, into)] class: String,
 ) -> impl IntoView {
@@ -17,13 +18,13 @@ pub fn link(
     );
 
     view! {
-        <a href=href class=style>
+        <A href=href class=style>
             <Show when=move || inline fallback=|| view! {}>
                 <svg>
                     <use_ xlink=true href="/assets/icons/sprite.svg#icon-link"></use_>
                 </svg>
             </Show>
-            {inner_text}
-        </a>
+            {children()}
+        </A>
     }
 }

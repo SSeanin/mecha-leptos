@@ -39,30 +39,28 @@ pub fn header() -> impl IntoView {
                                                         data_content=before_content
                                                         class=ClassName::HEADER_TITLE
                                                     >
-                                                        <Link
-                                                            class=ClassName::HEADER_LINK
-                                                            inner_text=latest_post.title
-                                                            href=href
-                                                        />
+                                                        <Link class=ClassName::HEADER_LINK href=href>
+                                                            {latest_post.title}
+                                                        </Link>
 
                                                     </HeadingSecondary>
 
                                                     <Meta>
                                                         <span>
-                                                            By
-                                                            <Link
-                                                                inline=true
-                                                                href="#"
-                                                                inner_text=format!(
+                                                            By <Link inline=true href="#">
+                                                                {format!(
                                                                     "{} {}",
                                                                     latest_post.author.first_name,
                                                                     latest_post.author.last_name,
-                                                                )
-                                                            />
+                                                                )}
+
+                                                            </Link>
 
                                                         </span>
                                                         <span>
-                                                            In <Link inline=true href="#" inner_text="Technology"/>
+                                                            In <Link inline=true href="#">
+                                                                Technology
+                                                            </Link>
                                                         </span>
                                                     </Meta>
 
