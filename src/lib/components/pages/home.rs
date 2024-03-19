@@ -1,5 +1,5 @@
 use leptos::*;
-use web_sys::{window, MouseEvent};
+use web_sys::window;
 
 use crate::{
     api::post::get_posts_paginated,
@@ -26,8 +26,7 @@ pub fn home() -> impl IntoView {
             <Header/>
 
             <ContentContainer>
-                <Stories on_load_click=move |event: MouseEvent| {
-                    event.prevent_default();
+                <Stories on_load_click=move |_| {
                     window().unwrap().scroll_to_with_x_and_y(0f64, 550f64);
                     set_page.update(|current_page| *current_page += 1)
                 }>
