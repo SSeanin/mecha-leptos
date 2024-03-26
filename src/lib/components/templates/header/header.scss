@@ -9,7 +9,7 @@
 
         &::before {
             display: block;
-            content: attr(data_content);
+            content: attr(data-content);
             padding-top: 10rem;
             font-family: $font-display;
             font-weight: 600;

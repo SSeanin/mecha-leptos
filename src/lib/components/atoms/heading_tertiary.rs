@@ -9,7 +9,7 @@ pub fn heading_tertiary(
     #[prop(optional, into)] data_content: String,
 ) -> impl IntoView {
     view! {
-        <h3 data_content=data_content class=format!("{} {}", ClassName::HEADING_TERTIARY, class)>
+        <h3 attr:data-content=data_content class=format!("{} {}", ClassName::HEADING_TERTIARY, class)>
             {children()}
         </h3>
     }

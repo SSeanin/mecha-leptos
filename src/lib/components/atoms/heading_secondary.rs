@@ -9,7 +9,7 @@ pub fn heading_secondary(
     #[prop(optional, into)] data_content: String,
 ) -> impl IntoView {
     view! {
-        <h2 data_content=data_content class=format!("{} {}", ClassName::HEADING_SECONDARY, class)>
+        <h2 attr:data-content=data_content class=format!("{} {}", ClassName::HEADING_SECONDARY, class)>
             {children()}
         </h2>
     }
