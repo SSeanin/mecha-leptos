@@ -1,4 +1,13 @@
+@import "abstracts/variables";
+
 html {
     // Enable smooth scrolling
     scroll-behavior: smooth;
+}
+
+// KEYFRAMES
+@keyframes shimmer {
+    to {
+        background-position-x: -200%;
+    }
 }
