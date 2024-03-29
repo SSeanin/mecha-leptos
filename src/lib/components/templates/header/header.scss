@@ -1,11 +1,12 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 .header {
     background-image: $header-gradient;
     color: $color-white;
 
     &__title {
-        margin: 0 17rem 2.8rem 17rem;
+        margin: 0 17rem 2.8rem;
 
         &::before {
             display: block;
@@ -22,6 +23,22 @@
             transform: translate(-50%, -50%);
             color: rgba($color-black, .1);
             z-index: -100;
+        }
+
+        @include respond(tab-land) {
+            margin: 0 14rem 2.8rem;
+        }
+
+        @include respond(tab-port) {
+            margin: 0 10rem 2.8rem;
+        }
+
+        @include respond(phone-wide) {
+            margin: 0 7rem 2.8rem;
+        }
+
+        @include respond(phone) {
+            margin: 0 4rem 2.8rem;
         }
     }
 

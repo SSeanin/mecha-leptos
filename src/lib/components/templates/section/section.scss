@@ -1,4 +1,5 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 .section {
     margin-top: -8rem;
@@ -9,4 +10,29 @@
     // Positioning
     z-index: 200;
     grid-column: inner-center-start / inner-center-end;
+
+    @include respond(tab-land) {
+        padding: 9rem 18.5rem 13rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 7rem 16rem 11rem;
+    }
+
+    @include respond(phone-wide) {
+        padding: 6.5rem 13.5rem 9.5rem;
+    }
+
+    @include respond(phone) {
+        margin-top: 0;
+        padding: 5.5rem 9rem 7rem;
+        box-shadow: none;
+
+        // Positioning
+        grid-column: inner-full-start / inner-full-end;
+    }
+
+    @include respond(phone-xs) {
+        padding: 4rem 5.3rem 6rem;
+    }
 }

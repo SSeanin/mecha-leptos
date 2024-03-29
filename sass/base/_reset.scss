@@ -1,3 +1,5 @@
+@import "abstracts/mixins";
+
 // Global reset
 *,
 *::before,
@@ -10,8 +12,33 @@
 html {
   // Defining 1rem to be 10px => 10px / 16px (default browser font) = 62.5%
   font-size: 62.5%;
+
+  @include respond(tab-land) {
+    // 1rem => 9px / 16px = 56.25%
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    // 1rem => 8px / 16px = 50%
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    // 1rem => 7px / 16px = 43.75%
+    font-size: 43.75%;
+  }
+
+  @include respond(phone-xs) {
+    // 1rem => 6px / 16px = 37.5%
+    font-size: 37.5%;
+  }
 }
 
 body {
   box-sizing: border-box;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
 }

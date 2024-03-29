@@ -1,4 +1,5 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 .content-container {
     background-color: $color-gray-light;
@@ -11,4 +12,8 @@
     grid-template-rows: [section-start] 1fr [section-end footer-start] 11rem [footer-end];
 
     grid-row-gap: 8rem;
+
+    @include respond(phone) {
+        grid-template-columns: [inner-full-start] minmax(8rem, 1fr) [inner-center-start] repeat(8, [inner-col-start] minmax(min-content, 14.6rem) [inner-col-end]) [inner-center-end] minmax(8rem, 1fr) [inner-full-end];
+    }
 }

@@ -15,3 +15,51 @@
   background-size: 200% 100%;
   animation: 1.5s shimmer linear infinite;
 }
+
+// Respond mixin arguments:
+
+// - phone
+// - phone-wide
+// - tab-port
+// - tab-land
+// - big-desktop
+
+// 1em = 16px
+
+@mixin respond($query) {
+  @if $query ==phone-xs {
+    @media only screen and (max-width: 21.875em) {
+      @content
+    }
+  }
+
+  @if $query ==phone {
+    @media only screen and (max-width: 37.5em) {
+      @content
+    }
+  }
+
+  @if $query ==phone-wide {
+    @media only screen and (max-width: 43.75em) {
+      @content
+    }
+  }
+
+  @if $query ==tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content
+    }
+  }
+
+  @if $query ==tab-land {
+    @media only screen and (max-width: 75em) {
+      @content
+    }
+  }
+
+  @if $query ==big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content
+    }
+  }
+}
