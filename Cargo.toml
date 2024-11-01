@@ -20,7 +20,7 @@ leptos_router = { version = "0.6.5", features = ["csr"] }
 reqwest = { version = "0.12.2", features = ["json", "cookies"] }
 serde = { version = "1.0", features = ["serde_derive"] }
 thiserror = "1.0.58"
-turf = "0.8.0"
+turf = "0.9.4"
 url = "2.5.0"
 
 [build-dependencies]
