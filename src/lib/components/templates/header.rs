@@ -28,12 +28,17 @@ pub fn header() -> impl IntoView {
                                     }>
                                         {post_resource_result
                                             .map(|posts| {
+                                                if posts.is_empty() {
+                                                    return view! { <pre>"No Resources Found"</pre> }
+                                                        .into_view();
+                                                }
                                                 let latest_post = posts[0].clone();
                                                 let href = format!("/posts/{}", latest_post.shortcode);
                                                 let before_content = latest_post
                                                     .title
                                                     .chars()
                                                     .collect::<Vec<char>>()[0];
+
                                                 view! {
                                                     <HeadingSecondary
                                                         data_content=before_content
@@ -69,6 +74,7 @@ pub fn header() -> impl IntoView {
                                                         href=format!("/posts/{}", latest_post.shortcode)
                                                     />
                                                 }
+                                                    .into_view()
                                             })}
 
                                     </ErrorBoundary>

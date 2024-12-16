@@ -26,9 +26,9 @@ pub fn article() -> impl IntoView {
 
     view! {
         <Container class=ClassName::ARTICLE_CONTAINER>
-            <Navbar/>
+            <Navbar />
 
-            <RawHeader/>
+            <RawHeader />
 
             <ContentContainer>
                 <Section class=ClassName::ARTICLE_SECTION>
@@ -74,7 +74,7 @@ pub fn article() -> impl IntoView {
                     </Suspense>
 
                 </Section>
-                <Footer/>
+                <Footer />
             </ContentContainer>
         </Container>
     }
